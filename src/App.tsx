@@ -1,16 +1,19 @@
 import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TechnicalAnalysisPage from './pages/TechnicalAnalysisPage'; // Caminho ajustado: agora está no mesmo nível
 
-export function App() {
+const HomePage: React.FC = () => {
   return (
     <>
       {/* Header */}
       <header className="header-container">
         <h1 className="logo">TECPIXEL</h1>
         <div className="botoesMenu">
-  <button><i className="fa fa-home"></i><span className="texto">Home</span></button>
-  <button><i className="fa fa-users"></i><span className="texto">Quem somos</span></button>
-  <button><i className="fa fa-envelope"></i><span className="texto">Contato</span></button>
-</div>
+          <button><i className="fa fa-home"></i><span className="texto">Home</span></button>
+          <button><i className="fa fa-users"></i><span className="texto">Quem somos</span></button>
+          <button><i className="fa fa-envelope"></i><span className="texto">Contato</span></button>
+        </div>
         <button className="botaobranco">Iniciar avaliação</button>
       </header>
 
@@ -35,7 +38,7 @@ export function App() {
         </div>
       </section>
 
-      {/* Análise Técnica */}
+      {/* Análise Técnica - Aqui adicionamos o Link */}
       <section className="anatec">
         <h2>
           <span className="gradiente">Análise Técnica</span>
@@ -45,7 +48,9 @@ export function App() {
           seja feita da melhor forma.
         </p>
         <p>Fique tranquilo, vamos resolver seu problema <br/>junto a você!</p>
-        <button>Começar</button>
+        <Link to="/analise-tecnica">
+          <button>Começar</button>
+        </Link>
       </section>
 
       {/* Mockup */}
@@ -61,6 +66,17 @@ export function App() {
         <div className="ball"></div>
       </div>
     </>
+  );
+};
+
+export function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/analise-tecnica" element={<TechnicalAnalysisPage />} />
+      </Routes>
+    </Router>
   );
 }
 
