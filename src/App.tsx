@@ -3,55 +3,63 @@ import "./App.css";
 export function App() {
   return (
     <>
-    <div className="header-container">
+      {/* Header */}
+      <header className="header-container">
+        <h1 className="logo">TECPIXEL</h1>
+        <div className="botoesMenu">
+  <button><i className="fa fa-home"></i><span className="texto">Home</span></button>
+  <button><i className="fa fa-users"></i><span className="texto">Quem somos</span></button>
+  <button><i className="fa fa-envelope"></i><span className="texto">Contato</span></button>
+</div>
+        <button className="botaobranco">Iniciar avaliação</button>
+      </header>
 
-<h1 className="logo">TECPIXEL</h1>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="content">
+          <div className="text-content">
+            <h2>
+              <span className="gradiente">Nos conheça <br/>
+              melhor!</span>
+            </h2>
+            <p>
+              Somos uma equipe independente, originada <br />
+              por meio acadêmico a fins de ajudar a <br/>comunidade diretamente.
+            </p>
+            <button>Saber mais</button>
+          </div>
 
-<div className="botoesMenu"> 
-    <button> Home </button>
-    <button> Quem somos</button>
-    <button> Contato</button>
-    </div>
-
-    <button  className="botaobranco"> Iniciar avaliação</button>
-    </div>
-     
-     <div className="estilo" >
-         <img id='Cara de fone' src="8591225.png" alt="imagem do cara de fone"/>
-     </div>
-   
-   <section className="hero">
-    <div className="introd">
-        <h2> <span className="gradiente">Nos conheça melhor!</span> </h2>
-        <p> Somos uma equipe independente, originada<br/>por meio acadêmico a fins de ajudar comunidade diretamente.</p>
-           
-        <button className="meubotao" > Saber mais</button>
-    </div>
-    
-    <div className="anatec">
-        <h2><span className="gradiente">Análise Técnica</span></h2>
-        <p> Responda as perguntas para que nossa análise <br/> seja feita da melhor forma.</p>
-        <p> Fique tranquilo, vamos resolver seu problema junto a você!</p>
-        <button>Começar</button>
-    </div>
-    <div className="melhoranatec"></div>
-
-    <div className="filtro-borrado"> </div>
-
-    <div className="bola azul1"></div>
-    <div className="bola azul2"></div>
-    <div className="bola azul3"></div>
-    <div className="bola azul4"></div>
-    <div className="bola azul5"></div>
-    <div className="bola azul6"></div>
-      </section>
-
-      <section className="analysis">
-     
-        <div className="phone-image">
-          <img src="public/mockup de celular.png" alt="Mockup de celular" />
+          <div className="image-content">
+            <img src="8591225.png" alt="Imagem do cara de fone" />
+          </div>
         </div>
       </section>
+
+      {/* Análise Técnica */}
+      <section className="anatec">
+        <h2>
+          <span className="gradiente">Análise Técnica</span>
+        </h2>
+        <p>
+          Responda as perguntas para que nossa análise <br />
+          seja feita da melhor forma.
+        </p>
+        <p>Fique tranquilo, vamos resolver seu problema <br/>junto a você!</p>
+        <button>Começar</button>
+      </section>
+
+      {/* Mockup */}
+      <section className="mockup-section">
+        <img src="mockup de celular.png" alt="Mockup de celular" />
+      </section>
+
+      {/* Background decorativo */}
+      <div className="background-decor">
+        <div className="ball"></div>
+        <div className="ball"></div>
+        <div className="ball"></div>
+        <div className="ball"></div>
+      </div>
     </>
   );
 }
