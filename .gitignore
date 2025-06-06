@@ -1,5 +1,5 @@
 # Ignora dependências
 node_modules/
 
-# Ignora a pasta server
-server/
+# Ignora a pasta node_modules do server 
+/server/node_modules

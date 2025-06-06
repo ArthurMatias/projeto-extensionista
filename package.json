@@ -10,7 +10,8 @@
     "eject": "react-scripts eject",
     "dev": "vite",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "npm install --prefix server"
   },
   "dependencies": {
     "react": "^19.1.0",
